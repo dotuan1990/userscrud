@@ -51,7 +51,10 @@ public class UserController {
 	public void deleteUser(@PathVariable String email) {
 		userService.deleteUser(email);
 	}
-	
+	@DeleteMapping("/{name}")
+	public void deleteUserByName(@PathVariable String name) {
+//		userService.deleteUserByName(name);
+	}
 	@PostMapping("")
 	public ResponseEntity<User> createUser(@Valid @RequestBody User user){
 		User savedUser = userService.createUser(user);

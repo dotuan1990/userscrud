@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 @Entity
 @NoArgsConstructor
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class Post {
 	
 	@Id

@@ -9,7 +9,7 @@ import com.example.userscrud.repository.UserRepository;
 import lombok.AllArgsConstructor;
 
 @Service
-@AllArgsConstructor
+//@AllArgsConstructor
 public class PostServiceImpl implements PostService {
 	
 	private PostRepository postRepository;
