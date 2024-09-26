@@ -54,6 +54,7 @@ public class UserController {
 	@DeleteMapping("/{name}")
 	public void deleteUserByName(@PathVariable String name) {
 //		userService.deleteUserByName(name);
+		// Test commit
 	}
 	@PostMapping("")
 	public ResponseEntity<User> createUser(@Valid @RequestBody User user){
