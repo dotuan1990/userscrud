@@ -51,11 +51,9 @@ public class UserController {
 	public void deleteUser(@PathVariable String email) {
 		userService.deleteUser(email);
 	}
-	@DeleteMapping("/{name}")
+	@DeleteMapping("/name/{name}")
 	public void deleteUserByName(@PathVariable String name) {
-//		userService.deleteUserByName(name);
-		// Test commit
-		// Test Hook
+		userService.deleteUserByName(name);
 	}
 	@PostMapping("")
 	public ResponseEntity<User> createUser(@Valid @RequestBody User user){
@@ -65,8 +63,9 @@ public class UserController {
 				.fromCurrentRequest()
 				.path("/{email}")
 				.buildAndExpand(savedUser.getEmail()).toUri();
+
 		// returning URI
-		
+		System.out.println(location);
 		return ResponseEntity.created(location).build();
 	}
 	
